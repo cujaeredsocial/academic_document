@@ -1,0 +1,45 @@
+%*******************************************************
+% Tabla de Contenidos
+%*******************************************************
+\pagestyle{scrheadings}
+\phantomsection
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+\tableofcontents
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\textsc{\thesection}\enspace\spacedlowsmallcaps{#1}}}
+
+%*******************************************************
+% Lista de Figuras
+%*******************************************************
+\phantomsection
+\pdfbookmark[1]{\listfigurename}{lof}
+\listoffigures
+\vspace{8ex}
+
+%*******************************************************
+% Lista de Tablas
+%*******************************************************
+\phantomsection
+\renewcommand{\listtablename}{Índice de Tablas}
+\pdfbookmark[1]{\listtablename}{lot}
+\listoftables
+
+\vspace{8ex}
+
+%*******************************************************
+% Lista de Listas
+%*******************************************************
+\phantomsection
+\renewcommand{\lstlistingname}{Listas}
+\renewcommand{\lstlistlistingname}{Índice de \lstlistingname}
+\pdfbookmark[1]{\lstlistlistingname}{lol}
+\lstlistoflistings
+
+\vspace{8ex}
+
+

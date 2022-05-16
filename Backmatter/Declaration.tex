@@ -1,0 +1,60 @@
+%*******************************************************
+% Declaración
+%*******************************************************
+\pdfbookmark[0]{Declaration}{Declaration}
+\chapter*{Declaración personal de autoría}
+
+\thispagestyle{empty}
+\noindent\myAuthorNameOne con número de identidad \myAuthorIDOne
+\ifdefined\myAuthorNameTwo{y \myAuthorNameTwo con número de identidad \myAuthorIDTwo}\fi
+, estudiante\ifdefined\myAuthorNameTwo{s }\fi del \textit{\myDegree} en la \myArea de la \myUni,
+como autor\ifdefined\myAuthorNameTwo{es }\fi de este documento académico titulado \emph{\myTitle}\\
+\vspace{0.5cm} \\
+DECLAR\ifdefined\myAuthorNameTwo{AMOS }\else{O }\fi QUE: \\
+\vspace{0.5cm} \\
+Es un trabajo original, que no se copio ni utilizo parte de obra alguna sin mencionar de forma clara y precisa su origen
+tanto en el cuerpo del texto como en su bibliografía y que no se empleo datos de terceros sin la debida autorización, de
+acuerdo con la legislación vigente.
+Asimismo, declar\ifdefined\myAuthorNameTwo{amos }\else{o }\fi que soy plenamente consciente de que no respetar esta
+obligación podrá implicar la aplicación de sanciones académicas, sin perjuicio de otras actuaciones que pudieran
+iniciarse.
+A la vez, autorizo a la \myUni para que haga el uso que se estime pertinente con este trabajo.
+\bigskip
+
+\begin{flushright}
+    \noindent\textit{\myLocation, \myTime}
+\end{flushright}
+
+\smallskip
+
+\begin{flushright}
+    \begin{tabular}{m{5cm}}
+        \\ \hline
+        \centering\myAuthorNameOne \\
+    \end{tabular}
+    \ifdefined\myAuthorNameTwo
+    \begin{tabular}{m{1cm}}
+        \centering\\
+    \end{tabular}
+    \begin{tabular}{m{5cm}}
+        \\ \hline
+        \centering\myAuthorNameTwo \\
+    \end{tabular}
+    \fi
+\end{flushright}
+
+\begin{flushright}
+    \begin{tabular}{m{5cm}}
+        \\ \hline
+        \centering\mySupervisorOne \\
+    \end{tabular}
+    \ifdefined\mySupervisorTwo
+    \begin{tabular}{m{1cm}}
+        \centering\\
+    \end{tabular}
+    \begin{tabular}{m{5cm}}
+        \\ \hline
+        \centering\mySupervisorTwo \\
+    \end{tabular}
+    \fi
+\end{flushright}

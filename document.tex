@@ -1,0 +1,66 @@
+%********************************************************************
+% Evitar las siguientes alertas
+% **************************************************************************************************************
+\RequirePackage{silence}
+\WarningFilter{scrreprt}{Usage of package `titlesec'}
+\WarningFilter{scrreprt}{Activating an ugly workaround}
+\WarningFilter{titlesec}{Non standard sectioning command detected}
+%********************************************************************
+% Ajustes
+%*******************************************************
+\pdfminorversion=7
+\documentclass[oneside,openright,titlepage,numbers=noenddot,headlines,headinclude,footinclude,cleardoublepage=empty,
+    abstract=on,BCOR=1mm,paper=letter,fontsize=12pt]{scrreprt}
+\usepackage{minted}
+\input{classic-config.tex}
+\usepackage[colorinlistoftodos,spanish,english,textsize=small,lipsum]{todonotes}
+\usepackage{lipsum}
+%********************************************************************
+% Bibliografía
+%*******************************************************
+\addbibresource[label=ownpubs]{bibliography.bib}
+%********************************************************************
+% Separación: El comando \hyphenation declara los puntos de separación permitidos, donde palabras es una lista de
+% palabras, separadas por espacios, en la que cada punto de separación se indica con un carácter
+%*******************************************************
+%\hyphenation{hyphenation}
+% ********************************************************************
+% Cuerpo de Documento
+%*******************************************************
+\begin{document}
+    \frenchspacing % no insertar espacios adicionales al final de las oraciones
+    \raggedbottom % hace que todas las páginas tengan la misma altura y no se agrega espacio vertical adicional
+    \selectlanguage{spanish} % american english spanish
+    \pagenumbering{roman}
+    \pagestyle{plain}
+    % Documento*******************************************************
+    \include{Backmatter/DirtyTitlepage}
+    \include{Backmatter/Titlepage}
+    \include{Backmatter/Titleback}
+    \include{Backmatter/Declaration}
+    \include{Backmatter/Dedication}
+    \include{Backmatter/Acknowledgments}
+    \include{Backmatter/Abstract}
+    \include{Backmatter/Publications}
+    \include{Backmatter/Contents}
+    \include{Backmatter/Acronyms}
+    % Mainmatter*******************************************************
+    \pagestyle{scrheadings}
+    \pagenumbering{arabic}
+    %\setcounter{page}{1}
+    % Chapters*******************************************************
+    \include{Chapters/Chapter01}
+    \include{Chapters/Chapter02}
+    \include{Chapters/Chapter03}
+    \include{Chapters/Chapter04}
+    \include{Chapters/Chapter05}
+    \include{Chapters/Chapter06}
+    \include{Chapters/Chapter07}
+    % Bibliography*****************************************************
+    \include{Backmatter/Bibliography}
+    % Backmatter*******************************************************
+    \appendix
+    \renewcommand{\thechapter}{\alph{chapter}}
+    \include{Chapters/Chapter0A}
+\end{document}
+% ********************************************************************

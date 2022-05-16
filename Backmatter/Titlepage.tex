@@ -1,0 +1,40 @@
+%*******************************************************
+% Segunda Presentación
+%*******************************************************
+\begin{titlepage}
+    \begin{addmargin}[0cm]{0cm}
+
+        \begin{center}
+            \includegraphics[width=0.8\textwidth]{Figure/logo-cujae-centro}\\
+
+            \LARGE{\textbf{\myArea}}\\
+
+            \Large{\textbf{\myDegree}} \\
+
+            \vspace{1.0cm}
+
+            \Large{\myTitle} \\
+
+            \vspace{0.5cm}
+
+            \ifdefined\mySubtitle{\Large{\mySubtitle}\\}\fi
+
+        \end{center}
+
+        \begin{itemize}
+            \ifdefined\myDepartment{\item \large{Departamento: \myDepartment}}\fi
+            \ifdefined\mySupervisorOne{\item \large{Tutor del Trabajo: \mySupervisorOne}}\fi
+            \ifdefined\mySupervisorTwo{\item \large{Tutor del Trabajo: \mySupervisorTwo}}\fi
+            \ifdefined\mySupervisorThree{\item \large{Tutor del Trabajo: \mySupervisorThree}}\fi
+            \ifdefined\myAuthorNameOne{\item \large{Autor del Trabajo: \myAuthorNameOne}}\fi
+            \ifdefined\myAuthorNameTwo{\item \large{Autor del Trabajo: \myAuthorNameTwo}}\fi
+        \end{itemize}
+
+        \vspace{0.2cm}
+
+        \begin{flushright}
+            \large{\myLocation, \today} \\
+        \end{flushright}
+    \end{addmargin}
+\end{titlepage}
+
